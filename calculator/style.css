@@ -1,0 +1,74 @@
+body{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: content-box;
+    background-color: #FFDEE9;
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+background-repeat: no-repeat;
+}
+
+.calc-container{
+   display:flex;
+   justify-content: center;
+   align-content: center;
+}
+
+.calc-body{
+    border-radius: 20px;
+    width: 350px;
+    height:80vh;
+    background: black;
+    margin:3em 0 0 0;
+    display:flex;
+    flex-direction: column;
+}
+
+.input-space{
+    height:35%;
+    color:white;
+    float:right;
+}
+
+.extra-container{
+    height:65%;
+}
+
+.symbols-space{
+    height: 100%;
+    background-color: #353536;
+    padding:15px;
+    display:grid;
+    border-radius: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-gap:-10px;
+}
+
+.symbols{
+    color:white;
+    font-size: 1.5rem;
+    font-weight:normal;
+    height: 60px;
+    width: 70px;
+    background:#191a1a;
+    border-radius:25px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #353536;
+    -webkit-box-shadow: 6px 6px 24px #202020, -6px -6px 24px #737374;
+    box-shadow: 6px 6px 24px #000000, -6px -6px 24px #4a4a4c;  
+}
+
+.special{
+     color:rgb(74, 255, 180);
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.special-1{
+    color:rgb(245, 112, 112);
+    font-size:2rem;
+}
+
