@@ -99,6 +99,14 @@ body{
 .special-1{
     color:rgb(245, 112, 112);
     font-size:2rem;
+
+}
+
+.hover-effect:hover{
+    font-weight: bolder;
+    background: rgb(56, 245, 166);
+    color:white;
+    
 }
 
 
