@@ -8,6 +8,7 @@ const preview = document.querySelector('.output-preview');
 
 let cross = document.querySelector('.cross').innerHTML.trim('');
 let divide = document.querySelector('.divide').innerHTML.trim('');
+let minus = document.querySelector('.minus').innerHTML.trim('');
 
 
 let OperatorList = [];
@@ -56,6 +57,7 @@ equal.addEventListener('click', function(){
     
 })
 
+// function to evaluate expression
 function eval(exp, opt){
     let midIndex = exp.indexOf(opt);
     let a = Number(exp.slice(0, midIndex));
@@ -69,8 +71,8 @@ function eval(exp, opt){
     else if(opt == '+'){
         return a+b;
     }
-    else if(opt == '-'){
-        return a-b;
+    else if(opt == minus){
+        return a - b;
     }
     
 
