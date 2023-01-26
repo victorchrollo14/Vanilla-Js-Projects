@@ -1,3 +1,142 @@
 body{
-    background: black;
+    height:100vh;
+    background-image: radial-gradient(circle, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* margin:65px 0 0 0; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+section{
+    height: 500px;
+    width:350px;
+    background: white;
+    margin: 0 1px 10px 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.product-image{
+    border-radius: 16px;
+     background: linear-gradient(
+        -25deg,
+        rgb(2, 110, 252) 50%,                                                                 
+        rgba(0, 255, 136, 0.849) 40%
+    );
+
+    
+}
+
+.product-image h4,p{
+    margin: 0;
+}
+h4{
+    font-size:larger;
+}
+
+.price{
+    font-size:x-large;
+    font-weight: bolder;
+}
+
+.details{
+    color:white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+}
+
+.buy-now{
+    border-radius: 32px;
+    background:rgba(0, 255, 136, 0.849);
+    width:150px;
+    padding: 10px 25px;
+    margin:20px 0 30px;
+    border:0;
+    color:white;
+    font-size: large;
+}
+
+.product-image:hover{
+    background: linear-gradient(
+        30deg,
+        rgb(2, 110, 252) 65%,                                                                 
+        rgba(0, 255, 136, 0.849) 55%
+    );
+    animation-name: drop;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    
+}
+
+@keyframes drop {
+      100% {
+        transition: ease-in;
+      }
+    
+}
+
+.shoe-image{
+    height: 300px;
+    width:auto;
+    margin:50px 50px 0 0;
+}
+
+.product-preference{
+    box-sizing: border-box;
+    color:white;
+    background: rgba(255, 255, 255, 0.158);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:20px;
+    
+}
+
+.star-price{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-1{
+    color:white;
+    font-size: 1.5rem;
+    font-weight: 1rem;
+}
+
+.checked {
+    color:orange;
+}
+.product-detail * {
+    margin:0;
+}
+.nike-airmax{
+    font-size: 2.5rem;
+}
+
+h2{
+    margin:10px 0;
+}
+.color-options{
+    display:flex;
+    flex-direction: row;
+    gap:5px;
+}
+.circle{
+    width:20px;
+    height:20px;
+    background-color:black;
+    border-radius:20px;
 }
