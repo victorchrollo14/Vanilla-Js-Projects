@@ -45,13 +45,23 @@ quoteButton.addEventListener('click', (e) => {
     let bc = randColor();
     let tc = Math.floor(Math.random() * 7);
 
-    // design changes
-    quoteSpace.innerHTML = data.quotes[rand].quote;
-    authorSpace.innerHTML = data.quotes[rand].author;
-    quoteSpace.style.color = textColor[tc];
-    authorSpace.style.color = textColor[tc];
-    main.style.background = `${colors[bc]}`;
-    quoteButton.style.background = colors[bc];
+    // quote and author fade out
+    quoteSpace.classList.add('fade-out');
+    authorSpace.classList.add('fade-out');
+    
+    authorSpace.addEventListener('transitionend', (e) => {
+        quoteSpace.innerHTML = data.quotes[rand].quote;
+        authorSpace.innerHTML = data.quotes[rand].author;
+
+        quoteSpace.classList.remove('fade-out');
+        authorSpace.classList.remove('fade-out');
+        quoteSpace.style.color = textColor[tc];
+        authorSpace.style.color = textColor[tc];
+        main.style.background = `${colors[bc]}`;
+        quoteButton.style.background = colors[bc];
+    })
+    
+    
 
 });
 
@@ -66,9 +76,9 @@ function randColor(){
 }
 
 quoteButton.addEventListener('mouseover', (e) => {
-    quoteButton.style.background = 'inherit';
+    quoteButton.style.background = 'transparent';
+    quoteButton.style.border = "1px solid white";
 })
-
 
 
 
