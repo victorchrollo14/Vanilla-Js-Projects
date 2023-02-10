@@ -41,9 +41,9 @@ const textColor = [
 
 // Quote generation
 quoteButton.addEventListener('click', (e) => {
-    let rand = randomNum();
-    let bc = randColor();
-    let tc = Math.floor(Math.random() * 7);
+    let rand = randomNum(102);
+    let bc = randomNum(18);
+    let tc = randomNum(7);
 
     // quote and author fade out
     quoteSpace.classList.add('fade-out');
@@ -66,13 +66,9 @@ quoteButton.addEventListener('click', (e) => {
 });
 
 // random number function
-function randomNum(){
-    const random = Math.floor(Math.random() * (102)) ;
+function randomNum(max){
+    const random = Math.floor(Math.random() * (max)) ;
     return random;
-}
-
-function randColor(){
-    return Math.floor(Math.random() * 18);
 }
 
 quoteButton.addEventListener('mouseover', (e) => {
