@@ -114,7 +114,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 .main .clock .mid .mid-1 {
@@ -122,16 +122,18 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .main .clock .clock-hours {
     position: absolute;
     top: 49%;
-    left: 52%;
+    left: 51.25%;
     width: 32%;
     height: 15px;
     background: white;
+    transform-origin: center left;
+    transform: rotate(-90deg);
     border-radius: 20px;
     z-index: 0;
 }
@@ -139,25 +141,27 @@
 .main .clock .clock-minutes {
     position: absolute;
     top: 49%;
-    left: 51%;
+    left: 51.25%;
     width: 40%;
     height: 8px;
     background: rgb(255, 255, 255);
     border-radius: 20px;
-    transform: rotate(270deg);
+    transform: rotate(-90deg);
     transform-origin: center left;
-    z-index: 0;
+    z-index: 1;
 }
 
 .main .clock .clock-seconds {
     position: absolute;
     top: 51%;
-    left: 43%;
+    left: 42%;
     width: 55%;
     height: 3px;
     border-radius: 10px;
     background-color: red;
-    z-index: 2;
+    transform: rotate(270deg);
+    transform-origin: 16.4% center;
+    z-index: 3;
 
 }
 
