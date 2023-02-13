@@ -77,3 +77,37 @@ function eval(exp, opt){
     
 
 }
+
+// Animation
+const toggle = document.querySelector('.dark-mode-toggle');
+const circle = toggle.firstElementChild;
+const calcBody = document.querySelector('.calc-body');
+const symbolSpace = document.querySelector('.symbols-space');
+let specialbuttons = [delBtn, AC, equal];
+
+toggle.addEventListener("click", function(e){
+        toggle.style.background = "black";
+        circle.style.background = "white";
+        circle.style.transform = "translateX(30px)";
+        calcBody.style.background = "white";
+        screen.style.background = "white";
+        screen.style.color = "black";
+        symbolSpace.style.background = "#eef5f5";
+        symbolSpace.children[16].style.color = "black";
+
+        InputBtns.forEach(input =>{
+            input.classList.add("box-shadow");
+            if (input.classList.contains("opt") === false){
+                input.style.color = 'black';
+            }
+         
+        })
+
+        specialbuttons.forEach(btn =>{
+            btn.style.background = "#eef5f5";
+            btn.classList.add("box-shadow");
+
+        })
+
+
+});

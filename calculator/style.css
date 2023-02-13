@@ -39,10 +39,24 @@ body {
 .dark-mode-toggle {
     position: absolute;
     top: 3%;
-    left: 38%;
+    left: 40%;
+    width: 55px;
+    height: 25px;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
     display: flex;
-    flex-direction: row;
+    justify-content: flex-start;
+    transition: all .5s ease-in-out;
 
+}
+
+.circle {
+    height: 25px;
+    width: 25px;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    position: relative;
+    transition: all .5s ease-in-out;
 }
 
 .box {
@@ -65,8 +79,7 @@ body {
     padding: 0 5px 0 0;
 }
 
-.input-space .typing-part,
-.input-space .output-preview {
+.input-space .typing-part {
     background: rgb(31, 29, 29);
     outline: none;
     border: 0;
@@ -104,6 +117,8 @@ body {
     justify-items: center;
     align-items: center;
     grid-gap: -10px;
+    transition: all .5s ease-in-out;
+
 }
 
 .symbols {
@@ -120,6 +135,14 @@ body {
     background: #353536;
     -webkit-box-shadow: 6px 6px 24px #202020, -6px -6px 24px #737374;
     box-shadow: 6px 6px 24px #000000, -6px -6px 24px #4a4a4c;
+    transition: all .5s ease-in-out;
+
+}
+
+.box-shadow {
+    background: #eef5f5;
+    -webkit-box-shadow: 12px 12px 24px #cad0d0, -12px -12px 24px #ffffff;
+    box-shadow: 12px 12px 24px #cad0d0, -12px -12px 24px #ffffff;
 }
 
 .special {
