@@ -7,7 +7,9 @@ This repo contains all the mini projects in vanilla JavaScript.
 Built a Simple calculator to perform basic math operations - '+', '-', '/', '*'.
 
 
-https://user-images.githubusercontent.com/89346667/213906217-ec9eccc8-2999-41a4-9b82-912781ccc205.mp4
+https://user-images.githubusercontent.com/89346667/218641785-8f4a358b-ac9a-4d7b-b583-b21de0206561.mp4
+
+
 
 ## Animated card Slider
 Built an animated card slider for a nike shoe.
