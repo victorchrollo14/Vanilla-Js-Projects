@@ -84,30 +84,70 @@ const circle = toggle.firstElementChild;
 const calcBody = document.querySelector('.calc-body');
 const symbolSpace = document.querySelector('.symbols-space');
 let specialbuttons = [delBtn, AC, equal];
+const mainBody = document.querySelector('.calc-container');
 
-toggle.addEventListener("click", function(e){
-        toggle.style.background = "black";
-        circle.style.background = "white";
-        circle.style.transform = "translateX(30px)";
-        calcBody.style.background = "white";
-        screen.style.background = "white";
-        screen.style.color = "black";
-        symbolSpace.style.background = "#eef5f5";
-        symbolSpace.children[16].style.color = "black";
+let count = 1;
+function darkMode(){
+    if (count == 1){
+            mainBody.style.backgroundImage = " ";
+            mainBody.style.background = "black";
+            toggle.style.background = "black";
+            circle.style.background = "white";
+            circle.style.transform = "translateX(30px)";
+            calcBody.style.background = "white";
+            screen.style.background = "white";
+            screen.style.color = "black";
+            symbolSpace.style.background = "#eef5f5";
+            symbolSpace.children[16].style.color = "black";
 
-        InputBtns.forEach(input =>{
-            input.classList.add("box-shadow");
-            if (input.classList.contains("opt") === false){
-                input.style.color = 'black';
-            }
-         
-        })
+            InputBtns.forEach(input =>{
+                input.classList.add("box-shadow");
+                if (input.classList.contains("opt") === false){
+                    input.style.color = 'black';
+                }
+            
+            })
 
-        specialbuttons.forEach(btn =>{
-            btn.style.background = "#eef5f5";
-            btn.classList.add("box-shadow");
+            specialbuttons.forEach(btn =>{
+                btn.style.background = "#eef5f5";
+                btn.classList.add("box-shadow");
 
-        })
+            })
+
+            equal.classList.remove("hover-effect");
+            equal.classList.add("light-hover-effect");
+    } // end of if
+    else {
+            mainBody.style.backgroundImage = "";
+            mainBody.style.background = "white";
+            toggle.style.background = "white";
+            circle.style.background = "black";
+            circle.style.transform = "translateX(0px)";
+            calcBody.style.background = "black";
+            screen.style.background = "black";
+            screen.style.color = "white";
+            symbolSpace.style.background = "#353536";
+            symbolSpace.children[16].style.color = "white";
+
+            InputBtns.forEach(input =>{
+                input.classList.remove("box-shadow");
+                if (input.classList.contains("opt") === false){
+                    input.style.color = 'white';
+                }
+            
+            })
+
+            specialbuttons.forEach(btn =>{
+                btn.style.background = "#353536";
+                btn.classList.remove("box-shadow");
+
+            })
+            equal.classList.remove("light-hover-effect");
+            equal.classList.add("hover-effect");
+    }
+    count = (count == 1) ? 0:1;
+
+} // end of darkMode()
 
 
-});
+toggle.addEventListener("click", darkMode);
