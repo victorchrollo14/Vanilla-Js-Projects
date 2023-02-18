@@ -1,0 +1,31 @@
+:root {
+    --lightest-blue: #B4F5F0;
+    --light-blue: #2CEEF0;
+    --blue: #0476D0;
+    --dark-blue: #041F60;
+    --light-grey: #E9EAEC;
+    --white: rgb(255, 255, 255);
+    --border-radius: 5px;
+    --brd-style: 2px solid var(--light-blue);
+
+}
+
+.main {
+    height: 100vh;
+    background: var(--light-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .container {
+    height: 500px;
+    width: 400px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    border: var(--brd-style);
+    box-shadow: 1px 4px 56px -3px rgba(15, 198, 255, 0.75);
+    -webkit-box-shadow: 1px 4px 56px -3px rgba(15, 198, 255, 0.75);
+    -moz-box-shadow: 1px 4px 56px -3px rgba(15, 198, 255, 0.75);
+
+}
