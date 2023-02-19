@@ -27,9 +27,9 @@
 @media screen and (min-width:320px) {
 
     .main .container {
-        height: 600px;
+        height: 500px;
         width: 400px;
-        min-width: 320px;
+        min-width: 300px;
         background: var(--white);
         border-radius: var(--border-radius);
         border: var(--border-light-blue);
@@ -51,6 +51,11 @@
         grid-template-rows: repeat(3, 1fr);
         /* border: var(--border-light-grey); */
         border: none;
+        cursor: pointer;
+    }
+
+    .item:hover {
+        background: var(--baby-blue);
     }
 
     .item {
@@ -126,13 +131,15 @@
     .x-mark {
         color: var(--blue);
         font-size: var(--fz-lg);
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     .o-mark {
-        font-size: var(--fz-lg);
         color: var(--light-blue);
-        font-family: var(--font-sans);
+    }
+
+    .x-mark,
+    .o-mark {
+        font-size: var(--fz-lg);
     }
 
 

@@ -1,9 +1,10 @@
-const squares = document.querySelector('.game-board').children;
+const squares = document.querySelectorAll('.item');
 const symbols = document.querySelectorAll('.sym');
 const X = document.querySelector('.x-mark');
+
 const O = document.querySelector('.o-mark');
 
-console.log(O, X);
+console.log(X);
 
 
 // changing focus on the selected symbol
@@ -19,3 +20,23 @@ symbols.forEach(symbol => {
         
     })
 });
+
+
+let i = 1;
+squares.forEach(square => {
+    square.addEventListener("click", (e) =>{
+        if (i === 1 && !e.target.hasChildNodes()){
+            let XClone = X.cloneNode(true);
+            e.target.appendChild(XClone);
+        }
+        else if(i === 0 && !e.target.hasChildNodes()){
+            let OClone = O.cloneNode(true);
+            e.target.appendChild(OClone);
+        }
+    i = (i == 0) ? 1:0;
+       
+    })
+})
+
+
+
