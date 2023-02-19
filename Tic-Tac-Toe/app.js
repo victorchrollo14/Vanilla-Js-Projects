@@ -1,6 +1,17 @@
 const squares = document.querySelectorAll('.item');
 const symbols = document.querySelectorAll('.sym');
 const reset = document.querySelector('.reset');
+const player = document.querySelector('.player');
+
+// music
+const gameOver = new Audio("Music/gameover.mp3");
+const ting = new Audio("Music/ting.mp3");
+const music = new Audio("Music/music.mp3");
+// music.play();
+
+// internal varibles
+const players = ["Player 1", "Player 2"];
+
 
 
 // changing focus on the selected symbol
@@ -33,11 +44,14 @@ squares.forEach(square => {
         if (i === 1 && !e.target.hasChildNodes()){
             let XClone = X.cloneNode(true);
             e.target.appendChild(XClone);
+            player.innerHTML = `${players[i]}`;
         }
         else if(i === 0 && !e.target.hasChildNodes()){
             let OClone = O.cloneNode(true);
             e.target.appendChild(OClone);
+            player.innerHTML = `${players[i]}`;
         }
+        
     i = (i == 0) ? 1:0;
        
     })
