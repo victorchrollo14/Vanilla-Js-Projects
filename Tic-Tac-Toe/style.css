@@ -9,15 +9,15 @@
     --border-radius: 5px;
     --border-light-blue: 2px solid var(--light-blue);
     --border-light-grey: 1px solid var(--light-grey);
+    --fz-md: 20px;
     --fz-lg: 50px;
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
-    --font-mono: '';
 
 }
 
 .main {
     height: 100vh;
-    background: url(dark-background.jpg);
+    background: url(Music/dark-background.jpg);
     /* background: var(--dark-blue); */
     display: flex;
     align-items: center;
@@ -40,6 +40,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 40px;
 
     }
 
@@ -73,6 +74,22 @@
         border-radius: 45px;
         display: flex;
         justify-content: space-around;
+    }
+
+    .reset {
+        padding: 10px 30px;
+        margin: 50px 0 0 0;
+        font-family: var(--font-sans);
+        color: var(--white);
+        background: var(--dark-blue);
+        border-radius: var(--border-radius);
+        border: var(--border-light-grey);
+    }
+
+    .main .container .player {
+        font-family: var(--font-sans);
+        font-size: var(--fz-md);
+        color: var(--dark-blue)
     }
 
     .sym {

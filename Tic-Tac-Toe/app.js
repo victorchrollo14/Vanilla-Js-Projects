@@ -1,10 +1,6 @@
 const squares = document.querySelectorAll('.item');
 const symbols = document.querySelectorAll('.sym');
-const X = document.querySelector('.x-mark');
-
-const O = document.querySelector('.o-mark');
-
-console.log(X);
+const reset = document.querySelector('.reset');
 
 
 // changing focus on the selected symbol
@@ -22,7 +18,16 @@ symbols.forEach(symbol => {
 });
 
 
+// Displaying X and O.
 let i = 1;
+const X = document.createElement('div');
+X.classList.add('x-mark');
+X.innerHTML = "✖";
+
+const O = document.createElement('div');
+O.classList.add('o-mark');
+O.innerHTML = "O";
+
 squares.forEach(square => {
     square.addEventListener("click", (e) =>{
         if (i === 1 && !e.target.hasChildNodes()){
@@ -37,6 +42,25 @@ squares.forEach(square => {
        
     })
 })
+
+
+// reset
+reset.addEventListener("click", function(e){
+    squares.forEach(square => {
+        if(!square.firstElementChild){
+            return;
+        }
+        square.firstElementChild.remove();
+
+    })
+})
+
+
+
+// checking if any player has won
+const checkWin = () =>{
+
+}
 
 
 
