@@ -35,6 +35,7 @@ const reStart = () =>{
         }
         square.firstElementChild.remove();
         player.innerHTML = "Player 1";
+        document.querySelector('.line').style.width = '0px';
         i = 1;
         // music.play();
     })
@@ -44,14 +45,14 @@ const reStart = () =>{
 // checking if any player has won
 const checkWin = () =>{
     let winCombo = [
-            [0, 1, 2],
-            [3, 4, 5],
-            [6, 7, 8],
-            [0, 3, 6],
-            [1, 4, 7],
-            [2, 5, 8],
-            [0, 4, 8],
-            [2, 4, 6]
+            [0, 1, 2, 0, -115, 0],
+            [3, 4, 5, 0, -28, 0],
+            [6, 7, 8, 0, 55, 0],
+            [0, 3, 6, -84, -30, 90],
+            [1, 4, 7, 0, -30, 90],
+            [2, 5, 8, 84, -30, 90],
+            [0, 4, 8, 0, -30, 45],
+            [2, 4, 6, 0, -30, -45]
     ];
     let winGame = false;
 
@@ -61,6 +62,8 @@ const checkWin = () =>{
         let box3 = squares[e[2]].innerText;
         if (box1 === box2 && box2 === box3 && box3 === box1 && box1 != ''){
             winGame = true;
+            document.querySelector('.line').style.width = '300px';
+            document.querySelector('.line').style.transform = `translate(${e[3]}px, ${e[4]}px) rotate(${e[5]}deg)`;
         }
         
     })
