@@ -37,7 +37,7 @@ const reStart = () =>{
         player.innerHTML = "Player 1";
         document.querySelector('.line').style.width = '0px';
         i = 1;
-        // music.play();
+        music.play();
     })
 }
 
@@ -81,7 +81,7 @@ const O = document.createElement('div');
 O.classList.add('o-mark');
 O.innerHTML = "O";
 
-// music.play();
+music.play();
 squares.forEach(square => {
     square.addEventListener("click", (e) =>{
         if (i === 1 && !e.target.hasChildNodes()){
