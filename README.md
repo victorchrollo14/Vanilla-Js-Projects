@@ -31,7 +31,14 @@ live preview: https://codepen.io/victorchrollo14/pen/gOdYjdq
 
 <video controls poster="https://user-images.githubusercontent.com/89346667/218498194-4b583118-07de-4dbe-a092-7c1900558191.png"
 src="https://user-images.githubusercontent.com/89346667/218497181-f7ef04d6-a2eb-42be-8e72-014ae502ee2b.mp4">
-  
+
+## Tic-Tac-Toe Game
+Made a tic-tac-toe game using javascript
+
+
+
+https://user-images.githubusercontent.com/89346667/219963021-6d7bbcfd-1b9d-41c6-8d99-c0810af81f5c.mp4
+
 
 
 
