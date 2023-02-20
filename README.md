@@ -33,7 +33,9 @@ live preview: https://codepen.io/victorchrollo14/pen/gOdYjdq
 src="https://user-images.githubusercontent.com/89346667/218497181-f7ef04d6-a2eb-42be-8e72-014ae502ee2b.mp4">
 
 ## Tic-Tac-Toe Game
-Made a tic-tac-toe game using javascript
+Made a tic-tac-toe game using javascript.
+
+live here: https://vanilla-js-projects-three.vercel.app/
 
 
 
