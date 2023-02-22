@@ -1,0 +1,21 @@
+:root {
+    --Navy: #0A2D45;
+    --blue: #00E1D4;
+    --yellow: #F5E12C;
+    --bd-radius: 5px;
+}
+
+.main {
+    height: 100vh;
+    background: var(--Navy);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-board {
+    width: clamp(200px, 95%, 500px);
+    height: 500px;
+    background: var(--blue);
+    border-radius: var(--bd-radius);
+}
