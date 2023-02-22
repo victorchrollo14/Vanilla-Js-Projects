@@ -10,10 +10,44 @@
     <section class="main">
       <div class="game-board">
         <div class="rpc">
-          <div class="your-hand">
+          <div class="your-section score-hand-part">
             <h3>you: <span class="your-score">1</span></h3>
-            <div class="circle-1"></div>
+            <div class="circle-1 circle">
+              <!-- <img src="asset/fist.png" alt="fist" class="image rock-1" /> -->
+              <!-- <img
+                src="asset/scissor.png"
+                alt="scissor"
+                class="image scissor-1"
+              /> -->
+              <img src="asset/five.png" alt="paper" class="image paper-1" />
+            </div>
+            <div class="options">
+              <button class="opt-btn">rock</button>
+              <button class="opt-btn">paper</button>
+              <button class="opt-btn">scissor</button>
+            </div>
           </div>
+          <!-- End of your section -->
+          <div class="versus">V/S</div>
+          <!-- bot section -->
+          <div class="bot-section score-hand-part">
+            <h3>Bot: <span class="bot-score">1</span></h3>
+            <div class="circle-2 circle">
+              <!-- <img src="asset/fist.png" alt="fist" class="image rock-2" /> -->
+              <!-- <img
+                src="asset/scissor.png"
+                alt="scissor"
+                class="image scissor-2"
+              /> -->
+              <img src="asset/five.png" alt="paper" class="image paper-2" />
+            </div>
+          </div>
+        </div>
+        <!-- End of rpc -->
+
+        <div class="buttons">
+          <button class="start btn">Start</button>
+          <button class="reset btn">Reset Score</button>
         </div>
       </div>
     </section>
