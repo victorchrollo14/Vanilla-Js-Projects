@@ -8,15 +8,30 @@ const circle2 = document.querySelector('.circle-2');
 const start = document.querySelector('.start');
 const reset = document.querySelector('.reset');
 
-const buttons = [rockBtn, paperBtn, scissorBtn]
-
+const buttons = [rockBtn, paperBtn, scissorBtn];
+const circles = [circle1, circle2];
+let angle = 10;
 
 // changing rock paper scissor
-buttons.forEach((btn) =>{
-    btn.addEventListener("click", (e) => {
-        let i = buttons.indexOf(btn);
-        removeCurrent(circle1.children[i]);
+
+
+// Start rotating rock paper scissor on start.
+start.addEventListener("click", () => {
+    let timer = setInterval(rockPaperScissor, 10);
+    function rockPaperScissor(){
+        angle = angle + 10;
+        circle1.style.transform = `rotate(${angle}deg)`;
+        circle2.style.transform = `rotate(${-angle}deg)`;
+    }
+
+    buttons.forEach((btn) =>{
+        btn.addEventListener("click", (e) => {
+            clearInterval(timer);
+            let i = buttons.indexOf(btn);
+            removeCurrent(circle1.children[i]);
+        })
     })
+
 })
 
 
@@ -29,4 +44,9 @@ function removeCurrent(nextItem){
     nextItem.classList.remove('hide');
     nextItem.classList.add('current');
 }
+
+
+
+
+
 
