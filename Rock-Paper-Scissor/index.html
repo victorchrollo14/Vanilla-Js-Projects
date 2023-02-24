@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="main">
+      <div class="game-board">
+        <div class="rpc">
+          <div class="your-section score-hand-part">
+            <h3>you: <span class="your-score">1</span></h3>
+            <div class="circle-1 circle">
+              <img
+                src="asset/fist.png"
+                alt="fist"
+                class="image rock-1 current"
+              />
+              <img
+                src="asset/five.png"
+                alt="paper"
+                class="image paper-1 hide"
+              />
+              <img
+                src="asset/scissor.png"
+                alt="scissor"
+                class="image scissor-1 hide"
+              />
+            </div>
+            <div class="options">
+              <button class="opt-btn btn-rock">rock</button>
+              <button class="opt-btn btn-paper">paper</button>
+              <button class="opt-btn btn-scissor">scissor</button>
+            </div>
+          </div>
+          <!-- End of your section -->
+          <div class="versus">V/S</div>
+          <!-- bot section -->
+          <div class="bot-section score-hand-part">
+            <h3>Bot: <span class="bot-score">1</span></h3>
+            <div class="circle-2 circle">
+              <img
+                src="asset/fist.png"
+                alt="fist"
+                class="image rock-2 current-1"
+              />
+              <img
+                src="asset/five.png"
+                alt="paper"
+                class="image paper-2 hide"
+              />
+              <img
+                src="asset/scissor.png"
+                alt="scissor"
+                class="image scissor-2 hide"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- End of rpc -->
+
+        <div class="buttons">
+          <button class="start btn">Start</button>
+          <button class="reset btn">Reset Score</button>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

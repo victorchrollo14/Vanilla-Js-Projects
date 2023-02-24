@@ -1,0 +1,137 @@
+:root {
+    --Navy: #0A2D45;
+    --blue: #00E1D4;
+    --yellow: #F5E12C;
+    --white: white;
+    --bd-radius: 5px;
+    --bd-radius-circle: 50%;
+    --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+.main {
+    height: 100vh;
+    background: var(--Navy);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-board {
+    width: clamp(200px, 95%, 600px);
+    height: 500px;
+    background: var(--blue);
+    border-radius: var(--bd-radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    background: var(--yellow);
+    border-radius: var(--bd-radius-circle);
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rpc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.score-hand-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: larger;
+    color: var(--Navy);
+    gap: 10px;
+}
+
+
+.bot-section {
+    margin: 0 0 35px 0;
+}
+
+.current {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.opt-btn {
+    background: var(--yellow);
+    font-family: var(--font-mono);
+    font-weight: 800;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: var(--bd-radius);
+    color: var(--Navy);
+    transition: all 0.5s ease;
+}
+
+.opt-btn:hover {
+    background: var(--Navy);
+    color: var(--white)
+}
+
+.versus {
+    font-family: var(--font-sans);
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+.image {
+    width: 75%;
+}
+
+.rock-1 {
+    transform: rotate(90deg);
+}
+
+.rock-2 {
+    transform: rotate(-90deg);
+}
+
+.scissor-2 {
+    transform: rotate(180deg);
+}
+
+.paper-2 {
+    transform: rotate(180deg);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 30px;
+    font-family: var(--font-mono);
+    font-weight: 900;
+    background: var(--Navy);
+    color: var(--yellow);
+    border-radius: var(--bd-radius);
+    border: 0px solid black;
+    transition: all 0.5s linear;
+}
+
+.btn:hover {
+    border: 1px solid white;
+    background: var(--yellow);
+    color: var(--Navy)
+}
