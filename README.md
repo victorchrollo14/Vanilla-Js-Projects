@@ -41,6 +41,17 @@ live here: https://vanilla-js-projects-three.vercel.app/
 
 https://user-images.githubusercontent.com/89346667/219963021-6d7bbcfd-1b9d-41c6-8d99-c0810af81f5c.mp4
 
+## Rock-Paper-Scissor 
+Made rock paper scissor using javascrip.
+
+live preview: https://vanilla-js-projects-2u5o.vercel.app/
+
+
+
+https://user-images.githubusercontent.com/89346667/221091776-32f7eb14-11ae-490d-98d3-2041b6fd653a.mp4
+
+
+
 
 
 
