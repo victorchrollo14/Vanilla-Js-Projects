@@ -9,9 +9,10 @@
   <body>
     <section class="main">
       <div class="game-board">
+        <span class="result"></span>
         <div class="rpc">
           <div class="your-section score-hand-part">
-            <h3>you: <span class="your-score">1</span></h3>
+            <h3>you</h3>
             <div class="circle-1 circle">
               <img
                 src="asset/fist.png"
@@ -39,7 +40,7 @@
           <div class="versus">V/S</div>
           <!-- bot section -->
           <div class="bot-section score-hand-part">
-            <h3>Bot: <span class="bot-score">1</span></h3>
+            <h3>Bot</h3>
             <div class="circle-2 circle">
               <img
                 src="asset/fist.png"
@@ -49,12 +50,12 @@
               <img
                 src="asset/five.png"
                 alt="paper"
-                class="image paper-2 hide"
+                class="image paper-2 hide-1"
               />
               <img
                 src="asset/scissor.png"
                 alt="scissor"
-                class="image scissor-2 hide"
+                class="image scissor-2 hide-1"
               />
             </div>
           </div>
@@ -63,7 +64,6 @@
 
         <div class="buttons">
           <button class="start btn">Start</button>
-          <button class="reset btn">Reset Score</button>
         </div>
       </div>
     </section>

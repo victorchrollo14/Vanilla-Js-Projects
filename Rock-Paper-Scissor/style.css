@@ -61,11 +61,13 @@
     margin: 0 0 35px 0;
 }
 
-.current {
+.current,
+.current-1 {
     display: block;
 }
 
-.hide {
+.hide,
+.hide-1 {
     display: none;
 }
 
@@ -97,19 +99,27 @@
 }
 
 .rock-1 {
-    transform: rotate(90deg);
+    transform: rotate(115deg);
 }
 
 .rock-2 {
-    transform: rotate(-90deg);
+    transform: rotate(-115deg);
+}
+
+.scissor-1 {
+    transform: rotate(30deg);
 }
 
 .scissor-2 {
-    transform: rotate(180deg);
+    transform: rotate(140deg);
+}
+
+.paper-1 {
+    transform: rotate(30deg);
 }
 
 .paper-2 {
-    transform: rotate(180deg);
+    transform: rotate(140deg);
 }
 
 .buttons {
@@ -117,6 +127,15 @@
     flex-direction: column;
     width: fit-content;
     gap: 10px;
+}
+
+.result {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(252, 63, 63);
+
 }
 
 .btn {
