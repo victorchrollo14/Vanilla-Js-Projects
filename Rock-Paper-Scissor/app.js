@@ -7,9 +7,9 @@ const circle2 = document.querySelector('.circle-2');
 
 const start = document.querySelector('.start');
 const reset = document.querySelector('.reset');
+const result = document.querySelector('.result');
 
 const buttons = [rockBtn, paperBtn, scissorBtn];
-const circles = [circle1, circle2];
 let angle = 10;
 
 // changing rock paper scissor
@@ -25,18 +25,31 @@ start.addEventListener("click", () => {
     }
 
     buttons.forEach((btn) =>{
+        let i = buttons.indexOf(btn);
+        let j = Math.floor(Math.random() * 3);
+
         btn.addEventListener("click", (e) => {
             clearInterval(timer);
-            let i = buttons.indexOf(btn);
+            console.log(i);
             removeCurrent(circle1.children[i]);
+            circle1.style.transform = `initial`;
+            circle2.style.transform = `initial`;
+    
+            // bot hand control
+            removeCurrent1(circle2.children[j]);
+    
+            // check for winner
+            checkWinner();
         })
     })
 
 })
 
 
+
+
 function removeCurrent(nextItem){
-    let current = document.querySelector('.current');
+    let current = circle1.querySelector('.current');
     current.classList.remove('current');
     current.classList.add('hide');
 
@@ -45,7 +58,33 @@ function removeCurrent(nextItem){
     nextItem.classList.add('current');
 }
 
+function removeCurrent1(nextItem){
+    let current1 = circle2.querySelector('.current-1');
+    current1.classList.remove('current-1');
+    current1.classList.add('hide-1');
 
+    nextItem.classList.remove('hide-1');
+    nextItem.classList.add('current-1');
+
+}
+
+const checkWinner = () => {
+    let yourChoice = circle1.querySelector('.current').attributes.alt.value;
+    let botChoice = circle2.querySelector('.current-1').attributes.alt.value;
+    console.log(yourChoice, botChoice);
+    if (yourChoice === botChoice){
+        result.innerHTML = `Draw`;
+    }
+    else if((yourChoice === 'fist' && botChoice === 'paper') || (yourChoice === 'paper' && botChoice === 'scissor') 
+    ||(yourChoice === 'scissor' && botChoice === 'fist')){
+        result.innerHTML = "'Bot Wins'";
+    }
+    else if(!(yourChoice === 'fist' && botChoice === 'paper') || !(yourChoice === 'paper' && botChoice === 'scissor') 
+    ||!(yourChoice === 'scissor' && botChoice === 'fist')){
+        result.innerHTML = "'You Win'";
+    }
+    
+}
 
 
 
