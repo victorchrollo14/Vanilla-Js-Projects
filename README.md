@@ -21,6 +21,8 @@ https://user-images.githubusercontent.com/89346667/214867510-ebfc31be-969b-45bf-
 ## Random Quote Generator
 Built a random quote generator, that gets the data from an external json file and also generates random color transitions.
 
+live: https://master--tangerine-hamster-03bbeb.netlify.app/
+
 https://user-images.githubusercontent.com/89346667/218136581-7c469d9f-2f7d-43c4-9f57-dbc046135c0d.mp4
 
 ## Analog Clock
